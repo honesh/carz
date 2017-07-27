@@ -74,7 +74,7 @@
                 <?php
                 $conn = mysqli_connect("localhost", "root", "", "carz");
 
-                
+
                 $username = $_COOKIE['username'];
                 $query = "CREATE TABLE IF NOT EXISTS cars(pickuptime text, returntime text, location text, car text, username text)";
                 mysqli_query($conn, $query);
@@ -83,7 +83,7 @@
                 $query = "SELECT * FROM rents WHERE username='$username'";
 
                 $result = mysqli_query($conn, $query);
-                $num_rows = mysqli_num_rows($result);
+                $num_rows = mysqli_num_rows(mysqli_query($conn, $query););
 
                 if ($num_rows == 0) {
                     echo "<tr><td colspan='4'>No Rental Records found on your account</td></tr>";
