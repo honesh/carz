@@ -72,11 +72,13 @@
             <h5>Your recent rents are as follow: </h5>
             <table>
                 <?php
+                $conn = mysqli_connect("localhost", "root", "", "carz");
+
+                
                 $username = $_COOKIE['username'];
                 $query = "CREATE TABLE IF NOT EXISTS cars(pickuptime text, returntime text, location text, car text, username text)";
                 mysqli_query($conn, $query);
 
-                $conn = mysqli_connect("localhost", "root", "", "carz");
 
                 $query = "SELECT * FROM rents WHERE username='$username'";
 
