@@ -83,7 +83,7 @@
                 $query = "SELECT * FROM rents WHERE username='$username'";
 
                 $result = mysqli_query($conn, $query);
-                $num_rows = mysqli_num_rows(mysqli_query($conn, $query));
+                $num_rows = mysql_num_rows($result);
 
                 if ($num_rows == 0) {
                     echo "<tr><td colspan='4'>No Rental Records found on your account</td></tr>";
