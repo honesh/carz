@@ -115,16 +115,26 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <label>Cars :</label>
+                            <label>Cars(Choose By Type) :</label>
                         </td>
-                        <td colspan="2">
-                            <select required name="car">
-                                <option value="" selected>Choose By Type</option>
-                            </select>
-                        </td>
-                        <td colspan="1">
+                        <td colspan="3">
                             <select required name="car">
                                 <option value="" selected>SUV</option>
+                                <?php
+                                $conn = mysqli_connect("localhost", "root", "", "carz");
+
+                                $query = "SELECT DISTINCT(type) FROM cars";
+
+                                $result = mysqli_query($conn, $query);
+
+                                while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                                    echo "<option>" .
+                                        $row['type'] .
+                                        "</option>";
+                                }
+
+                                mysqli_close($conn);
+                                ?>
                             </select>
                         </td>
                     </tr>
