@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>login form</title>
+    <title>Home</title>
     <style>
         body {
             margin: 0;
@@ -11,10 +11,11 @@
 
         .box {
             width: 600px;
-            height: 500px;
+            /*height: 500px;*/
             border: 5px solid #000;
             border-radius: 10px;
             padding: 10px 40px 25px;
+            margin: auto auto;
         }
 
         .box h3 {
@@ -31,10 +32,10 @@
         }
 
         input {
-            width: 100%;
             padding: 10px;
             font-family: cambria, "Hoefler Text", "Liberation Serif", Times, serif;
             margin-top: 10px;
+            display: inline;
         }
 
         label {
@@ -66,14 +67,35 @@
 </head>
 <body>
 <div align="center">
-    <h1 style="font-family:cambria,'Hoefler Text','Liberation Serif',Times,serif">
+    <div style="font-family:cambria,'Hoefler Text','Liberation Serif',Times,serif">
         <div class="box">
-            <h3>Rent a car</h3>
+            <h3>Home</h3>
             <br><br>
-            <form method="post" action="">
-                <input type="radio" name="option" value="rent">Rent a car
+            <form method="post" action="next.php">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="radio" required name="option" value="rent"> Rent a car
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="option" value="personal-info"> Enter/View Personal Information
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="option" value="rental-info"> View Rental Information
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Next >>">
+                        </td>
+                    </tr>
+                </table>
             </form>
         </div>
-</div>
+    </div>
 </body>
 </html>

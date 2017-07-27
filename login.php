@@ -13,7 +13,7 @@ $result = mysqli_fetch_array($result, MYSQLI_ASSOC);
 mysqli_close($conn);
 if ($result['password'] == $password) {
     echo "Login Successful";
-    header("/home");
+    header("Location: /home");
 } else {
     echo "Login failed, Username or password is wrong";
 }

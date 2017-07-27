@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>login form</title>
+    <title>Rent a car</title>
     <style>
         body {
             margin: 0;
