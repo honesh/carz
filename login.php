@@ -12,6 +12,7 @@ $result = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
 mysqli_close($conn);
 if ($result['password'] == $password) {
+    setcookie("username", $username);
     echo "Login Successful";
     header("Location: /home");
 } else {

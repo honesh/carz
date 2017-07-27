@@ -70,7 +70,7 @@
         <div class="box">
             <h3>Rent a car</h3>
             <br><br>
-            <form method="post" action="">
+            <form method="post" action="rent.php">
                 <table>
                     <tr>
                         <td colspan="2">
@@ -94,7 +94,6 @@
                         </td>
                         <td colspan="3">
                             <select required name="location">
-                                <option value="" selected>Bus Stand</option>
                                 <?php
                                 $conn = mysqli_connect("localhost", "root", "", "carz");
 
@@ -119,7 +118,6 @@
                         </td>
                         <td colspan="3">
                             <select required name="car">
-                                <option value="" selected>SUV</option>
                                 <?php
                                 $conn = mysqli_connect("localhost", "root", "", "carz");
 
