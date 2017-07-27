@@ -1,84 +1,83 @@
 <html>
 <head>
-<meta charset="utf-8">
-<title>login form</title>
-<style>ll
-body
-{
-     margin: 0;
-     padding: o;
-     background-colour:#FFF;
-}
-.loginbox
-{
-width:300px;
-height:500px;
-border:5px solid #000;
-border-radius:100px;
-padding:10px 40px 25px;
-}
-.loginbox h3
-{
-background-color:#black;
-color:#00F;
-text-align:center;
-padding:20px;
-border-radius: 10px 10px 0 0;
-margin:-10px -40;
-border-bottom:1px solid #999;
-font-family:cambria,"Hoefler Text","Liberation Serif",Times,""
-font-size:24px;
-font-weight:bold;
-}
-input[type=text],input[type=password]
-{
-width:280px;
-padding:10px;
-font_family:cambria,"Hoefler Text","Liberation Serif",Times,""class
-font-size:20px;
-margin-top:10px;
-}
-label
-{
-font-size:20px;
-font-family:cambria,"Hoefler Text","Liberation Serif",Times,""
-}
-input[type=submit]
-{
-background_color:#0b3b0b;
-width:300px;
-border:0;
-padding:10px;
-color:#FFF;
-font_family:cambria,"Hoefler Text","Liberation Serif",Times,""
-font-size:20px;
-border-radius:5px;
-margin-top:40px;
-font-weight:bold;
-}
-.error
-{
-color:red;
-margin-top:10px;
-font-size:18px;
-font_family:cambria,"Hoefler Text","Liberation Serif",Times,""
-}
-</style>
+    <meta charset="utf-8">
+    <title>login form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #FFF;
+        }
+
+        .loginBox {
+            width: 300px;
+            height: 500px;
+            border: 5px solid #000;
+            border-radius: 100px;
+            padding: 10px 40px 25px;
+        }
+
+        .loginBox h3 {
+            background-color: black;
+            color: #00F;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+            margin: -10px -40px;
+            border-bottom: 1px solid #999;
+            font-family: cambria, "Hoefler Text", "Liberation Serif", Times, serif;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        input[type=text], input[type=password] {
+            width: 280px;
+            padding: 10px;
+            font-family: cambria, "Hoefler Text", "Liberation Serif", Times, serif;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        label {
+            font-size: 20px;
+            font-family: cambria, "Hoefler Text", "Liberation Serif", Times, serif
+        }
+
+        input[type=submit] {
+            background-color: #0b3b0b;
+            width: 300px;
+            border: 0;
+            padding: 10px;
+            color: #FFF;
+            font-family: cambria, "Hoefler Text", "Liberation Serif", Times, serif;
+            font-size: 20px;
+            border-radius: 5px;
+            margin-top: 40px;
+            font-weight: bold;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+            font-size: 18px;
+            font-family: cambria, "Hoefler Text", "Liberation Serif", Times, serif
+        }
+    </style>
 </head>
 <body>
 <div align="center">
-<h1 style="font_family:cambria,"Hoefler Text",'Liberation Serif',Times,"">
-<div class="loginBox">
-<h3>Login Form</h3>
-<br><br>
-<form method="post" action="login.php">
-<label style="color:#red">username:</label><br>
-<input type="text" name="username" placeholder="username"/><br>
-<label style="color:#000">password:</label><br>
-<input type="password"name="password" placeholder="password"/>
-<input type="submit"value="login">
-</form>
-</div>
+    <h1 style="font-family:cambria,'Hoefler Text','Liberation Serif',Times,serif">
+        <div class="loginBox">
+            <h3>Login Form</h3>
+            <br><br>
+            <form method="post" action="login.php">
+                <label style="color:red">username:</label><br>
+                <input type="text" required name="username" placeholder="username"/><br>
+                <label style="color:#000">password:</label><br>
+                <input type="password" required name="password" placeholder="password"/>
+                <input type="submit" value="Login">
+            </form>
+        </div>
 </div>
 </body>
 </html>
