@@ -15,8 +15,6 @@ $query = "INSERT INTO rents VALUES('$pickUpTime', '$returnTime', '$location', '$
 
 mysqli_query($conn, $query);
 
-echo $pickUpTime, $returnTime, $location, $car;
-
 mysqli_close($conn);
 
 include "success.html";
