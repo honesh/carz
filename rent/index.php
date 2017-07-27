@@ -77,7 +77,8 @@
                             <label>Choose Pick Up Time:</label>
                         </td>
                         <td colspan="3">
-                            <input type="datetime" required name="pick-up-time" placeholder="YYYY-MM-DD HH:mm:ss"/>
+                            <input type="datetime-local" required name="pick-up-time"
+                                   placeholder="YYYY-MM-DD HH:mm:ss"/>
                         </td>
                     </tr>
                     <tr>
@@ -85,7 +86,7 @@
                             <label>Choose Return Time :</label>
                         </td>
                         <td colspan="3">
-                            <input type="datetime" required name="return-time" placeholder="YYYY-MM-DD HH:mm:ss"/><br>
+                            <input type="datetime-local" required name="return-time" placeholder="YYYY-MM-DD HH:mm:ss"/><br>
                         </td>
                     </tr>
                     <tr>
