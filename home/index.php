@@ -71,69 +71,7 @@
             <h3>Rent a car</h3>
             <br><br>
             <form method="post" action="">
-                <table>
-                    <tr>
-                        <td colspan="2">
-                            <label>Choose Pick Up Time:</label>
-                        </td>
-                        <td colspan="3">
-                            <input type="datetime" required name="pick-up-time" placeholder="YYYY-MM-DD HH:mm:ss"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <label>Choose Return Time :</label>
-                        </td>
-                        <td colspan="3">
-                            <input type="datetime" required name="return-time" placeholder="YYYY-MM-DD HH:mm:ss"/><br>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <label>Location :</label>
-                        </td>
-                        <td colspan="3">
-                            <select required name="location">
-                                <option value="" selected>Bus Stand</option>
-                                <?php
-                                $conn = mysqli_connect("localhost", "root", "", "carz");
-
-                                $query = "SELECT name FROM stops";
-
-                                $result = mysqli_query($conn, $query);
-
-                                while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-                                    echo "<option>" .
-                                        $row['name'] .
-                                        "</option>";
-                                }
-
-                                mysqli_close($conn);
-                                ?>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <label>Cars :</label>
-                        </td>
-                        <td colspan="2">
-                            <select required name="car">
-                                <option value="" selected>Choose By Type</option>
-                            </select>
-                        </td>
-                        <td colspan="1">
-                            <select required name="car">
-                                <option value="" selected>SUV</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="5" align="center">
-                            <input type="submit" value="Rent">
-                        </td>
-                    </tr>
-                </table>
+                <input type="radio" name="option" value="rent">Rent a car
             </form>
         </div>
 </div>
